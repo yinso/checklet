@@ -205,7 +205,6 @@ Validator.registerType 'or', OrValidator
 
 class ObjectValidator extends Validator
   @make: (obj) ->
-    loglet.log 'ObjectValidator.make', obj
     inner = {}
     for key, val of obj
       inner[key] = Validator.make val 
